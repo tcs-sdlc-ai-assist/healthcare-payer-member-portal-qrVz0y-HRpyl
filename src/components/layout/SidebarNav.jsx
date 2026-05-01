@@ -69,6 +69,17 @@ const NavIcon = ({ name, size }) => {
           <line x1="1" y1="10" x2="23" y2="10" />
         </svg>
       );
+    case 'id-card':
+      return (
+        <svg {...iconProps}>
+          <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+          <circle cx="8" cy="10" r="2" />
+          <path d="M6 16c.5-1.5 1.2-2 2-2s1.5.5 2 2" />
+          <line x1="13" y1="9" x2="18" y2="9" />
+          <line x1="13" y1="13" x2="18" y2="13" />
+          <line x1="13" y1="17" x2="16" y2="17" />
+        </svg>
+      );
     case 'mail':
       return (
         <svg {...iconProps}>

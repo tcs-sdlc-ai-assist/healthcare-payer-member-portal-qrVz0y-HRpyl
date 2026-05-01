@@ -50,7 +50,11 @@ export const getIDCards = (params = {}) => {
   }
 
   if (params.activeOnly) {
-    const activeCards = getActiveIDCardsByMemberId(params.memberId);
+    let activeCards = getActiveIDCardsByMemberId(params.memberId);
+
+    if (params.coverageType) {
+      activeCards = activeCards.filter((card) => card.coverageType === params.coverageType);
+    }
 
     const enrichedCards = activeCards.map((card) => enrichCard(card));
 

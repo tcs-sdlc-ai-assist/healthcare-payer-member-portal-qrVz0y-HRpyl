@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
 import { useGlassbox } from '../../context/GlassboxContext.jsx';
 import { getIDCards } from '../../services/idCardService.js';
-import { HB_CLASSES, ROUTES, COVERAGE_TYPE_LABELS } from '../../constants/constants.js';
+import { HB_CLASSES, ROUTES } from '../../constants/constants.js';
 import Badge from '../ui/Badge.jsx';
 
 /**
@@ -76,7 +76,7 @@ const getCoverageIcon = (coverageType) => {
  * IDCardSummaryWidget component.
  * Dashboard widget showing a summary of the member's active ID cards with
  * member name, plan name, and masked member ID. Provides quick links to
- * the full ID Cards / Coverage page. Uses HB CSS card styling and Glassbox
+ * the full ID Cards page. Uses HB CSS card styling and Glassbox
  * masking attributes for PHI/PII protection.
  *
  * @param {Object} props
@@ -132,10 +132,10 @@ const IDCardSummaryWidget = ({ className, id }) => {
   }, [fetchIDCards]);
 
   /**
-   * Handles navigation to the coverage/ID cards page.
+   * Handles navigation to the ID cards page.
    */
   const handleViewAllCards = useCallback(() => {
-    navigate(ROUTES.COVERAGE);
+    navigate(ROUTES.ID_CARDS);
   }, [navigate]);
 
   /**

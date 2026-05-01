@@ -41,6 +41,7 @@ export const ROLES = {
 export const NAV_ITEMS = [
   { label: 'Dashboard', path: '/dashboard', icon: 'home', roles: [ROLES.MEMBER, ROLES.ADMIN] },
   { label: 'My Coverage', path: '/coverage', icon: 'shield', roles: [ROLES.MEMBER, ROLES.ADMIN] },
+  { label: 'ID Cards', path: '/id-cards', icon: 'id-card', roles: [ROLES.MEMBER, ROLES.ADMIN] },
   { label: 'Claims', path: '/claims', icon: 'file-text', roles: [ROLES.MEMBER, ROLES.ADMIN] },
   { label: 'Find a Doctor', path: '/find-doctor', icon: 'search', roles: [ROLES.MEMBER, ROLES.ADMIN] },
   { label: 'Documents', path: '/documents', icon: 'folder', roles: [ROLES.MEMBER, ROLES.ADMIN] },
@@ -331,6 +332,7 @@ export const ROUTES = {
   CLAIMS: '/claims',
   CLAIM_DETAIL: '/claims/:id',
   FIND_DOCTOR: '/find-doctor',
+  ID_CARDS: '/id-cards',
   DOCUMENTS: '/documents',
   PAYMENTS: '/payments',
   MESSAGES: '/messages',

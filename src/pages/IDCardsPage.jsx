@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useGlassbox } from '../context/GlassboxContext.jsx';
-import { getIDCards, getIDCardDetails, getIDCardPdf, printIDCard, requestNewCard } from '../services/idCardService.js';
-import { HB_CLASSES, COVERAGE_TYPE_LABELS } from '../constants/constants.js';
+import { getIDCards, getIDCardPdf, printIDCard } from '../services/idCardService.js';
+import { HB_CLASSES, ROUTES } from '../constants/constants.js';
 import CoverageSelector from '../components/shared/CoverageSelector.jsx';
 import IDCardPreview from '../components/idcards/IDCardPreview.jsx';
 import IDCardActions from '../components/idcards/IDCardActions.jsx';
@@ -164,7 +164,7 @@ const IDCardsPage = () => {
   useEffect(() => {
     tagPageViewed({
       pageName: 'ID Cards',
-      route: '/coverage',
+      route: ROUTES.ID_CARDS,
     });
   }, [tagPageViewed]);
 

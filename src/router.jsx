@@ -145,7 +145,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/id-cards',
+    path: ROUTES.ID_CARDS,
     element: (
       <ProtectedRoute>
         <DashboardLayout>
